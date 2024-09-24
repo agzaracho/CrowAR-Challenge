@@ -49,6 +49,6 @@ PWDEBUG=1 pytest
 PWDEBUG=1 pytest tests/test_login.py::test_valid_login --browser-type firefox 
 ```
 
-### Nota
+## Nota
 
 Este proyecto ha sido probado y se garantiza su correcto funcionamiento utilizando **Git Bash**.
