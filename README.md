@@ -1,4 +1,4 @@
-# Proyecto de Pruebas Automatizadas con Playwright, Pytest y Allure
+# Proyecto de Pruebas Automatizadas con Python, Pytest, Playwright, y Allure
 
 Este proyecto contiene un conjunto de pruebas automatizadas para validar funcionalidades de login, carrito de compras y la interacción con servicios web.
 
@@ -12,22 +12,17 @@ Este proyecto contiene un conjunto de pruebas automatizadas para validar funcion
 
 ## Instanciar el proyecto
 
-1. Clona este repositorio:
+1. Clonar este repositorio:
 
 ```bash
 git clone https://github.com/tu_usuario/tu_proyecto.git
 cd tu_proyecto
 ```
-2. Crea un entorno virtual (opcional, pero recomendado):
-```bash
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-```
-3. Instala las dependencias del proyecto 
+2. Instala las dependencias del proyecto 
 ```bash
 pip install -r requirements.txt
 ```
-4. Instala los navegadores necesarios para Playwright:
+3. Instala los navegadores necesarios para Playwright:
 ```bash
 playwright install
 ```
@@ -50,3 +45,10 @@ pytest --browser-type firefox
 ```bash
 PWDEBUG=1 pytest
 ```
+```bash
+PWDEBUG=1 pytest tests/test_login.py::test_valid_login --browser-type firefox 
+```
+
+### Nota
+
+Este proyecto ha sido probado y se garantiza su correcto funcionamiento utilizando **Git Bash**.
