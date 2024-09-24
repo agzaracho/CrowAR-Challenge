@@ -34,7 +34,7 @@ def api_request(endpoint, method="GET", validation_key=None):
         assert validation_key in response_data, f"La clave '{validation_key}' no está presente en la respuesta"
 
 # Caso de prueba específico para Mercado Libre usando la función genérica
-@pytest.mark.web
+@pytest.mark.ws
 @allure.title("Validación de respuesta a Servicio Web")
 @allure.description("Este test verifica la correcta conexión y respuesta de un  Servicio Web")
 @allure.tag("ws", "medium")

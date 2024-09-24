@@ -7,30 +7,9 @@ def pytest_addoption(parser):
     parser.addoption(
         "--report", action="store", default="true", help="Genera el reporte html con Allure y lo abre al finalizar el set"
     )
-    parser.addoption(
-        "--browser-type", action="store", default="", help="Selecciona el navegador: chromium o firefox"
-    )
 
-# Fixture que obtiene el navegador de la línea de comandos o usa ambos por defecto
-@pytest.fixture(scope="session")
-def browser_types(pytestconfig):
-    browser_type = pytestconfig.getoption("--browser-type")
-    
-    # Si no se especifica, usamos ambos navegadores
-    if browser_type == "":
-        return ["chromium", "firefox"]
-    elif browser_type in ["chromium", "firefox"]:
-        return [browser_type]
-    else:
-        raise ValueError(f"Navegador no soportado: {browser_type}")
-
-# Fixture para lanzar el navegador
 @pytest.fixture(params=["chromium", "firefox"])
-def browser_type_launch(request, browser_types):
-    # Solo ejecuta el navegador si está en la lista de los navegadores permitidos
-    if request.param not in browser_types:
-        pytest.skip(f"El navegador {request.param} no fue seleccionado.")
-    
+def browser_type_launch(request):
     with sync_playwright() as p:
         browser_type = request.param
 
@@ -54,4 +33,3 @@ def pytest_sessionfinish(session, exitstatus):
         
         # Abrir el reporte de Allure en español
         os.system('allure serve allure-results --lang es')
-

@@ -10,7 +10,7 @@ Este proyecto contiene un conjunto de pruebas automatizadas para validar funcion
    ```bash
    npm install -g allure-commandline --save-dev
 
-## Instancias el proyecto
+## Instanciar el proyecto
 
 1. Clona este repositorio:
 
@@ -32,5 +32,21 @@ pip install -r requirements.txt
 playwright install
 ```
 
+## Ejecutar set
 
-
+1. Ejecuta el set completo utilizando chrome y firefox
+```bash
+pytest
+```
+2. Ejecuta el set completo utilizando chrome 
+```bash
+pytest --browser-type chromium
+```
+3. Ejecuta el set completo utilizando firefox
+```bash
+pytest --browser-type firefox
+```
+4. Ejecuta el set en modo debug
+```bash
+PWDEBUG=1 pytest
+```
