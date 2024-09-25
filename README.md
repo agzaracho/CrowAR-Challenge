@@ -1,4 +1,4 @@
-# Proyecto de Pruebas Automatizadas con Python, Pytest, Playwright, y Allure
+# Proyecto de Pruebas Automatizadas con Python, Pytest, Playwright y Allure
 
 Este proyecto contiene un conjunto de pruebas automatizadas para validar funcionalidades de login, carrito de compras y la interacción con servicios web.
 
