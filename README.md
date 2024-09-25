@@ -15,7 +15,7 @@ Este proyecto contiene un conjunto de pruebas automatizadas para validar funcion
 1. Clonar este repositorio:
 
 ```bash
-git clone https://github.com/agzaracho/CrowAR-Challenge.git
+git clone https://github.com/agzaracho/Crowdar-Challenge.git
 cd tu_proyecto
 ```
 2. Instala las dependencias del proyecto 
